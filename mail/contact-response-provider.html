@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .email-container {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .email-header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .email-header img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff6f61;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            color: #dcdcdc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+            text-align-last: center;
+        }
+        .highlight-text {
+            color: #ff6f61;
+            font-weight: bold;
+        }
+        .contact-info {
+            margin-top: 30px;
+            background-color: #333333;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .contact-info p {
+            font-size: 16px;
+            color: #dddddd;
+            margin: 10px 0;
+        }
+        .contact-info span {
+            font-weight: bold;
+            color: #ff6f61;
+        }
+        .footer {
+            font-size: 14px;
+            color: #bbb;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <img src="cid:logo-ryoshi" alt="Ryoshi Sushi">
+            <h2>¡Nueva Solicitud de Contacto!</h2>
+        </div>
+        <p>Queremos informarte que hemos recibido una nueva consulta. Contáctalo lo antes posible.</p>
+        <div class="contact-info">
+            <p><span>Nombre:</span> {{name}}</p>
+            <p><span>Descripción:</span> {{description}}</p>
+            <p><span>Email:</span> {{mail}}</p>
+            <p><span>Teléfono:</span> {{phone}}</p>
+        </div>
+        <div class="footer">
+            <p>&copy; <span id="year"></span> Ryoshi Sushi - Todos los derechos reservados</p>
+        </div>
+        <script>
+            const date = new Date();
+            const year = date.getFullYear();
+            document.getElementById('year').textContent = year;
+        </script>
+    </div>
+</body>
+</html>
